@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-title">
+      <h1>Employee Directory</h1>
+    </div>
+    <div class="header-center">
+      <input type="text" id="search-input" placeholder="Search by name or email" />
+    </div>
+    <div class="header-right">
+      <button id="filter-toggle">Filter</button>
+    </div>
+  </header>
+
+  <!-- Controls: Sort, Show, Add -->
+  <section class="controls">
+    <div class="left-controls">
+      <label for="sort-select">Sort:</label>
+      <select id="sort-select">
+        <option value="">--Select--</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+
+      <label for="items-per-page">Show:</label>
+      <select id="items-per-page">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+
+    <div class="right-controls">
+      <a href="form.html"><button id="add-employee">Add Employee</button></a>
+    </div>
+  </section>
+
+  <!-- Filter Sidebar -->
+  <aside id="filter-sidebar" class="hidden">
+    <h3>Filter Employees</h3>
+    <label>First Name:</label>
+    <input type="text" id="filter-firstname" />
+
+    <label>Department:</label>
+    <input type="text" id="filter-department" />
+
+    <label>Role:</label>
+    <input type="text" id="filter-role" />
+
+    <div class="filter-buttons">
+      <button id="apply-filter">Apply</button>
+      <button id="reset-filter">Reset</button>
+    </div>
+  </aside>
+
+  <!-- Employee Grid & Pagination -->
+  <main>
+    <div id="employee-list-container" class="employee-grid"></div>
+    <div id="pagination-controls" class="pagination"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script src="../static/js/data.js"></script>
+  <script src="../static/js/app.js"></script>
+</body>
+</html>
